@@ -1,4 +1,4 @@
-#!/bin
+#!/bin/sh
 
 yum update
 yum install wget git
