@@ -4,7 +4,7 @@ yum update
 yum install wget git
 cd /etc/yum.repos.d/
 wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-6/librehat-shadowsocks-epel-6.repo
-
+yum install shadowsocks-libev
 compile_ss (){
 cd /tmp
 yum install gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel
