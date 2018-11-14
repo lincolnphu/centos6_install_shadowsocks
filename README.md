@@ -1,0 +1,1 @@
+# centos6_install_shadowsocks
