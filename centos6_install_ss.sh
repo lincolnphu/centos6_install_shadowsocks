@@ -31,7 +31,7 @@ make install
 }
 compile_autoconfig (){
 cd /tmp
-yum install gcc autoconf libtool automake make zlib-devel openssl-devel asciidoc xmlto
+yum install gcc  libtool automake make zlib-devel openssl-devel asciidoc xmlto
 wget ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.68.tar.gz
 tar zxvf autoconf-2.68.tar.gz
 cd autoconf-2.68
