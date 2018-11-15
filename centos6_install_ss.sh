@@ -54,7 +54,7 @@ cp /tmp/shadowsocks-libev/rpm/SOURCES/etc/init.d/shadowsocks-libev /etc/init.d/
 cp /tmp/simple-obfs/debian/config.json /etc/shadowsocks-libev
 chmod +x /etc/init.d/shadowsocks-libev
 chkconfig --add shadowsocks-libev
-server shadowsocks-libev start
+sevice shadowsocks-libev start
 }
 compile_autoconfig
 compile_ss
