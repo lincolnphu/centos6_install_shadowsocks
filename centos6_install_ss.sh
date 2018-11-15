@@ -1,14 +1,13 @@
 #!/bin/sh
 
 yum update
+yum --enablerepo=epel  install libev-devel
+yum --enablerepo=epel  install pcre-devel
 yum install wget git
-cd /etc/yum.repos.d/
-wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-6/librehat-shadowsocks-epel-6.repo
-yum update
-yum install shadowsocks-libev
+
 compile_ss (){
 cd /tmp
-yum install gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel
+yum install gettext gcc  libtool automake make asciidoc xmlto c-ares-devel libev-devel
 git clone https://github.com/shadowsocks/shadowsocks-libev.git
 git submodule update --init --recursive
 cd shadowsocks-libev
@@ -20,7 +19,7 @@ make install
 popd
 ldconfig
 
-wget https://tls.mbed.org/download/start/mbedtls-2.6.0-gpl.tgz
+wget https://tls.mbed.org/download/mbedtls-2.6.0-gpl.tgz
 tar xvf mbedtls-2.6.0-gpl.tgz
 pushd mbedtls-2.6.0
 make SHARED=1 CFLAGS=-fPIC
@@ -47,9 +46,21 @@ git clone https://github.com/shadowsocks/simple-obfs.git
 cd simple-obfs
 git submodule update --init --recursive
 ./autogen.sh
-./configure --prefix=/usr && make
+./configure --prefix=/usr && ln -s /usr/include/libev/ev.h ./src/ev.h && make
 sudo make install
 }
+
+compile_after () {
+mkdir /etc/shadowsocks-libev
+cp /tmp/shadowsocks-libev/rpm/SOURCES/etc/init.d/shadowsocks-libev /etc/init.d/
+cp /tmp/simple-obfs/debian/config.json /etc/shadowsocks-libev
+chmod +x /etc/init.d/shadowsocks-libev
+chkconfig --add shadowsocks-libev
+server shadowsocks-libev start
+}
+compile_autoconfig
 compile_ss
+compile_obfs
+compile_after
 
 
