@@ -3,11 +3,10 @@
 yum update
 yum --enablerepo=epel  install libev-devel
 yum --enablerepo=epel  install pcre-devel
-yum install wget git
+yum install wget git  gcc  libtool automake make zlib-devel openssl-devel asciidoc xmlto c-ares-devel
 
 compile_ss (){
 cd /tmp
-yum install gettext gcc  libtool automake make asciidoc xmlto c-ares-devel libev-devel
 git clone https://github.com/shadowsocks/shadowsocks-libev.git
 git submodule update --init --recursive
 cd shadowsocks-libev
@@ -32,7 +31,6 @@ make install
 }
 compile_autoconfig (){
 cd /tmp
-yum install gcc  libtool automake make zlib-devel openssl-devel asciidoc xmlto
 wget ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.68.tar.gz
 tar zxvf autoconf-2.68.tar.gz
 cd autoconf-2.68
