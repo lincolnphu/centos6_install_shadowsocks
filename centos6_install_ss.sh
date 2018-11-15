@@ -10,6 +10,7 @@ compile_ss (){
 cd /tmp
 yum install gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel
 git clone https://github.com/shadowsocks/shadowsocks-libev.git
+git submodule update --init --recursive
 cd shadowsocks-libev
 wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.16.tar.gz
 tar xvf libsodium-1.0.16.tar.gz
