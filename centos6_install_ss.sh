@@ -4,6 +4,7 @@ yum update
 yum install wget git
 cd /etc/yum.repos.d/
 wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-6/librehat-shadowsocks-epel-6.repo
+yum update
 yum install shadowsocks-libev
 compile_ss (){
 cd /tmp
@@ -48,7 +49,6 @@ git submodule update --init --recursive
 ./configure --prefix=/usr && make
 sudo make install
 }
+compile_ss
 
-compile_autoconfig
-compile_obfs
 
