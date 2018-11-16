@@ -1,9 +1,9 @@
 #!/bin/sh
 
-yum update
-yum --enablerepo=epel  install libev-devel
-yum --enablerepo=epel  install pcre-devel
-yum install wget git  gcc  libtool automake make zlib-devel openssl-devel asciidoc xmlto c-ares-devel
+yum -y update
+yum --enablerepo=epel -y install libev-devel
+yum --enablerepo=epel  -y install pcre-devel
+yum install -y wget git  gcc  libtool automake make zlib-devel openssl-devel asciidoc xmlto c-ares-devel
 
 compile_ss (){
 cd /tmp
