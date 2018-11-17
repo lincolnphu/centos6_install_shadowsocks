@@ -9,9 +9,9 @@ compile_ss (){
 cd /tmp
 wget -O shadowsocks.tar.gz https://raw.githubusercontent.com/lincolnphu/centos6_install_shadowsocks/master/shadowsocks.tar.gz?token=AJq8XUbiLqOwIezXN7zGT_w-RrQrC1U9ks5b-HNWwA%3D%3D
 tar xvf shadowsocks.tar.gz
+cd shadowsocks-libev
 wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.16.tar.gz
 tar xvf libsodium-1.0.16.tar.gz
-cd shadowsocks-libev
 pushd libsodium-1.0.16
 ./configure --prefix=/usr && make
 make install
