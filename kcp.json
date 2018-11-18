@@ -1,6 +1,6 @@
 {  
-  "listen": ":443",
-  "target": "0.0.0.0:42311", 
+  "listen": "0.0.0.0:42121",
+  "target": "0.0.0.0:443", 
   "key": "passoword",
   "crypt": "salsa20",
   "mode": "fast2",
