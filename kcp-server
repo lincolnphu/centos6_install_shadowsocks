@@ -6,7 +6,7 @@
 
 
 
-DAEMON=/usr/bin/kcptun
+DAEMON=/usr/bin/server_linux_386
 DAEMONOPTS="-c /usr/local/etc/kcptun-server-config.json"
 
 NAME=kcptun
