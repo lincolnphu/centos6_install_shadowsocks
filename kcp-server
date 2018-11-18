@@ -53,7 +53,7 @@ KCPTUN_CONFIG = KcptunConfig()
 
 PIDFILE = '/var/run/{}.pid'.format(PROGRAME)
 LOGFILE = '/var/log/{}.log'.format(PROGRAME)
-EXECFILE = '/usr/local/bin/server_linux_amd64'
+EXECFILE = '/usr/local/bin/server_linux_386'
 CONFIGFILE = '/usr/local/etc/kcptun-server-config.json'
 
 
