@@ -7,9 +7,9 @@ yum install -y wget git  gcc  libtool automake make zlib-devel openssl-devel asc
 
 compile_ss (){
 cd /tmp
-wget -O shadowsocks.tar.gz https://raw.githubusercontent.com/lincolnphu/centos6_install_shadowsocks/master/shadowsocks.tar.gz?token=AJq8XUbiLqOwIezXN7zGT_w-RrQrC1U9ks5b-HNWwA%3D%3D
-tar xvf shadowsocks.tar.gz
+git clone https://github.com/shadowsocks/shadowsocks-libev.git
 cd shadowsocks-libev
+git submodule update --init --recursive
 wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.16.tar.gz
 tar xvf libsodium-1.0.16.tar.gz
 pushd libsodium-1.0.16
