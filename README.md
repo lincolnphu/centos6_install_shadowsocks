@@ -2,7 +2,8 @@
 
 **在搬瓦工root shell里面输入**：
   1）ss:
-```bash yum update -y && yum install -y wget && cd /tmp && wget -O start.sh https://bit.ly/2QQKUMv && chmod +x ./start.sh && ./start.sh
+```bash 
+yum update -y && yum install -y wget && cd /tmp && wget -O start.sh https://bit.ly/2QQKUMv && chmod +x ./start.sh && ./start.sh
 ```
 
 2）kcp：
