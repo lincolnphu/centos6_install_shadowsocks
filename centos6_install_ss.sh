@@ -49,6 +49,7 @@ sudo make install
 }
 
 compile_after () {
+rm -rf /etc/shadowsocks-libev
 mkdir /etc/shadowsocks-libev
 cp /tmp/shadowsocks-libev/rpm/SOURCES/etc/init.d/shadowsocks-libev /etc/init.d/
 wget -O config.json https://raw.githubusercontent.com/lincolnphu/centos6_install_shadowsocks/master/config.json
@@ -58,7 +59,7 @@ chkconfig --add shadowsocks-libev
 service shadowsocks-libev start
 }
 #compile_autoconfig
-compile_ss
+#compile_ss
 #compile_obfs
 compile_after
 
