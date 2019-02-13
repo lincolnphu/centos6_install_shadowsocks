@@ -56,7 +56,7 @@ wget -O config.json https://raw.githubusercontent.com/lincolnphu/centos6_install
 mv config.json /etc/shadowsocks-libev/
 chmod +x /etc/init.d/shadowsocks-libev
 chkconfig --add shadowsocks-libev
-service shadowsocks-libev start
+service shadowsocks-libev restart
 }
 #compile_autoconfig
 #compile_ss
