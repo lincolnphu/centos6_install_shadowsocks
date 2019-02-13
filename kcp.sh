@@ -1,7 +1,7 @@
 #!/bin/sh
 cd /tmp
-wget https://github.com/xtaci/kcptun/releases/download/v20181230/kcptun-linux-386-20181230.tar.gz
-tar xvf kcptun-linux-386-20181230.tar.gz
+wget https://github.com/xtaci/kcptun/releases/download/v20190109/kcptun-linux-386-20190109.tar.gz
+tar xvf kcptun-linux-386-20190109.tar.gz
 chmod +x ./server_linux_386
 mv server_linux_386 /usr/bin/
 wget -O /usr/local/etc/kcptun-server-config.json https://raw.githubusercontent.com/lincolnphu/centos6_install_shadowsocks/master/kcp.json
