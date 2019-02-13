@@ -57,9 +57,9 @@ chmod +x /etc/init.d/shadowsocks-libev
 chkconfig --add shadowsocks-libev
 service shadowsocks-libev start
 }
-compile_autoconfig
+#compile_autoconfig
 compile_ss
-compile_obfs
+#compile_obfs
 compile_after
 
 
