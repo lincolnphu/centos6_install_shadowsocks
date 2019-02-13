@@ -8,5 +8,5 @@ yum update -y && yum install -y wget && cd /tmp && wget -O start.sh shorturl.at/
 
 2）kcp：
 ```bash
-cd /tmp && rm -rf * && wget -O kcp.sh https://bit.ly/2FDpyBk && chmod +x kcp.sh && ./kcp.sh
+cd /tmp && rm -rf * && wget -O kcp.sh https://raw.githubusercontent.com/lincolnphu/centos6_install_shadowsocks/master/kcp.sh && chmod +x kcp.sh && ./kcp.sh
 ```
