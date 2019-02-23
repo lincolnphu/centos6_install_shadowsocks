@@ -1,5 +1,5 @@
 {  
-  "listen": "0.0.0.0:42121",
+  "listen": "0.0.0.0:14871",
   "target": "0.0.0.0:443", 
   "key": "H=d[XL`3GmS+#X=F",
   "crypt": "salsa20",
