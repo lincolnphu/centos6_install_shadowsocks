@@ -1,7 +1,7 @@
 {  
   "listen": "0.0.0.0:42121",
   "target": "0.0.0.0:443", 
-  "key": "passoword",
+  "key": "H=d[XL`3GmS+#X=F",
   "crypt": "salsa20",
   "mode": "fast2",
   "mtu": 1350,
